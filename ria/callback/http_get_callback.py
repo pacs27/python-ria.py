@@ -15,5 +15,9 @@ def http_get_callback(url: str) -> HttpGetRequestRet:
         raise Exception(
             "No es posible conectar con la API. Compruebe que los datos introducidos estén bien."
         )
+    elif response.status_code == 500:
+        raise Exception(
+            response.text
+        )
 
     return {"status": response.status_code, "data": json.loads(response.text)}

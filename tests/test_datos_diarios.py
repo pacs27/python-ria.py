@@ -20,9 +20,9 @@ class TestDatosDias(unittest.TestCase):
     def test_datos_diarios_periodo(self):
         datos_diarios = self.ria_stations.obtener_datos_diarios_periodo(
             provincia_id=14,
-            estacion_id="2",
-            fecha_inicio=date(2021, 10, 10),
-            fecha_fin=date(2021, 11, 10),
+            estacion_id="6",
+            fecha_inicio="2021-1-1",
+            fecha_fin="2021-12-31",
             lg_et0=True,
         )
 
